@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Getting Started with Lofi radio
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Preview
+
+![alt text](./SCR-20221002-1ip.png "preview")
 
 ## Available Scripts
 
