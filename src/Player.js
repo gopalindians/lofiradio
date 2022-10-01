@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Helmet} from "react-helmet";
 
 import('./Player.css');
 
@@ -33,6 +34,10 @@ export default function Player({
         <div className='player' style={{
             zIndex: 999999
         }}>
+            <Helmet titleTemplate="%s - Lofi Radio">
+                <meta charSet="utf-8" />
+                <title>{`${currentVideoData.title}`}</title>
+            </Helmet>
             <div className='player_inner'>
                 <div className='player_inner__top'>
                     <div className='t_left'>
