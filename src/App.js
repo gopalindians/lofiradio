@@ -1,7 +1,7 @@
 import './App.css';
 import YouTube from "react-youtube";
 import Player from "./Player";
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useMemo, useState} from "react";
 
 function App() {
 
@@ -63,15 +63,19 @@ function App() {
             autoplay: 1,
         },
     };
+
+    const obj = useMemo(() => {
+        return random;
+    }, []);
     const init = useCallback(
         () => {
-            if (random !== null) {
-                setCurrentVideoData(random);
+            if (obj !== null) {
+                setCurrentVideoData(obj);
             }
         },
-        [random]
+        [obj]
     );
-    useEffect(init, []);
+    useEffect(init, [obj]);
 
     useEffect(() => {
         let timeoutTimer = '';
