@@ -36,7 +36,7 @@ export default function Player({
         }}>
             <Helmet titleTemplate="%s - Lofi Radio">
                 <meta charSet="utf-8" />
-                <title>{`${currentVideoData.title}`}</title>
+                <title>{`${isPlaying?'⏸':'▶️'}️ ${currentVideoData.title}`}</title>
             </Helmet>
             <div className='player_inner'>
                 <div className='player_inner__top'>
