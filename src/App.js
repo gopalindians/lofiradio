@@ -41,7 +41,6 @@ function App() {
         let random = videoIds[(Math.floor(Math.random() * videoIds.length))];
         setCurrentVideoId(random.id)
         setCurrentVideoData(random)
-        console.debug('RANDOM VIDEO');
         return random.id;
     }
     const [currentVideoData, setCurrentVideoData] = useState(
@@ -55,7 +54,6 @@ function App() {
     const [currentVideoId, setCurrentVideoId] = useState(random.id);
     const [iframeTarget, setIframeTarget] = useState(Event.target);
     const [progress, setProgress] = useState(0);
-    const [videoTitle, setVideoTitle] = useState('');
     const [videoLength, setVideoLength] = useState(100);
     const opts = {
         height: 1,
@@ -131,7 +129,6 @@ function App() {
     }
     const _onReady = (event) => {
         setIframeTarget(event.target);
-        setVideoTitle(event.target.videoTitle);
         setVideoLength(event.target.getDuration() / 60);
         setIsPlaying(true);
     }
