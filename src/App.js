@@ -1,7 +1,7 @@
 import './App.css';
 import YouTube from "react-youtube";
 import Player from "./Player";
-import {useCallback, useEffect, useMemo, useState} from "react";
+import {useEffect, useState} from "react";
 
 function App() {
 
@@ -64,18 +64,10 @@ function App() {
         },
     };
 
-    const obj = useMemo(() => {
-        return random;
+    useEffect(()=>{
+        setCurrentVideoData(random)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    const init = useCallback(
-        () => {
-            if (obj !== null) {
-                setCurrentVideoData(obj);
-            }
-        },
-        [obj]
-    );
-    useEffect(init, [obj]);
 
     useEffect(() => {
         let timeoutTimer = '';
