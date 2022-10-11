@@ -41,6 +41,12 @@ function App() {
             title: '1 Hour Of Aesthetic Indian Lofi, Bollywood Lofi Songs To Chill Study Relax And Enjoy❤🎶',
             poster: 'LChom6tBtKM.jpeg',
             author: 'Jubin Hoof'
+        },
+        {
+            id: 'HA-WJYc4J9c',
+            title: 'Long Drive Mashup | Non-Stop JukeBox | Jay Guldekar | Road Trip Mashup | Romantic LoFi, Chill',
+            poster: 'HA-WJYc4J9c.jpeg',
+            author: 'Jay Guldekar'
         }
     ]);
     const randomVideo = () => {
