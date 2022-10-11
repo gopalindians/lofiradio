@@ -35,6 +35,12 @@ function App() {
             title: '1 Hour Of Night Hindi Lofi Songs To Study, Chill, Relax and Refreshing',
             poster: 'uS5wfG1REN4.webp',
             author: 'LoFi and Chill'
+        },
+        {
+            id: 'LChom6tBtKM',
+            title: '1 Hour Of Aesthetic Indian Lofi, Bollywood Lofi Songs To Chill Study Relax And Enjoy❤🎶',
+            poster: 'LChom6tBtKM.jpeg',
+            author: 'Jubin Hoof'
         }
     ]);
     const randomVideo = () => {
