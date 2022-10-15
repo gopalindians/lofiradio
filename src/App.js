@@ -1,7 +1,8 @@
 import './App.css';
 import YouTube from "react-youtube";
+import React, {useEffect, useState} from "react";
 import Player from "./Player";
-import {useEffect, useState} from "react";
+// const Player = React.lazy(() => import('./Player'));
 
 function App() {
 
