@@ -1,3 +1,7 @@
+## [0.0.4] - 2022-10-15
+### Added
+- Gtag
+
 ## [0.0.3] - 2022-10-15
 ### Added
 - Loader
@@ -10,7 +14,8 @@
 ### Added
 - Jubin Hoof
 
-[Unreleased]: https://bitbucket.org/medsetgo/website/src/dev/v0.0.3...HEAD
+[Unreleased]: https://bitbucket.org/medsetgo/website/src/dev/v0.0.4...HEAD
+[0.0.4]: https://github.com/gopalindians/lofiradio/releases/tag/0.0.4
 [0.0.3]: https://github.com/gopalindians/lofiradio/releases/tag/0.0.3
 [0.0.2]: https://github.com/gopalindians/lofiradio/releases/tag/0.0.2
 [0.0.1]: https://github.com/gopalindians/lofiradio/releases/tag/0.0.1

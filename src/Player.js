@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Helmet} from "react-helmet";
-
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 import('./Player.css');
 
 export default function Player({
@@ -17,17 +17,20 @@ export default function Player({
                                    playRepeat
                                }) {
     const [seek, setSeek] = useState(progress);
-
+    const gaEventTracker = useAnalyticsEventTracker('Player');
     const handleChange = e => {
         setSeek(parseFloat(e.target.value).toFixed(2));
         seekTo(e.target.value * (videoLength / 60));
+        gaEventTracker('seek')
     };
 
     const handlePlayPause = () => {
         if (isPlaying) {
             clickPause();
+            gaEventTracker('pause')
         } else {
             clickPlay();
+            gaEventTracker('play')
         }
     }
     return (

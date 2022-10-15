@@ -2,10 +2,13 @@ import './App.css';
 import YouTube from "react-youtube";
 import React, {useEffect, useState} from "react";
 import Player from "./Player";
-// const Player = React.lazy(() => import('./Player'));
+import ReactGA from 'react-ga';
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
+const TRACKING_ID = "G-EEZYQ5LJVB"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
-
+    const gaEventTracker = useAnalyticsEventTracker('Player');
     const [videoIds] = useState([
         {
             id: 'rtTI1rh9U5M',
@@ -82,9 +85,12 @@ function App() {
             autoplay: 1,
         },
     };
-
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
     useEffect(()=>{
         setCurrentVideoData(random)
+        gaEventTracker('PlayerInit');
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -113,10 +119,12 @@ function App() {
     const clickPlay = () => {
         iframeTarget.playVideo();
         setIsPlaying(true);
+        gaEventTracker('playVideo');
     }
     const clickPause = () => {
         iframeTarget.pauseVideo();
         setIsPlaying(false);
+        gaEventTracker('pauseVideo');
     }
 
     const playRandom = () => {
@@ -127,6 +135,7 @@ function App() {
             iframeTarget.playVideo();
             setVideoLength(iframeTarget.getDuration() / 60);
             setIsPlaying(true);
+            gaEventTracker('playRandom');
         }, 200);
 
     }
@@ -137,6 +146,7 @@ function App() {
         iframeTarget.loadVideoById(currentVideoId);
         iframeTarget.playVideo();
         setIsPlaying(true);
+        gaEventTracker('playNext');
     }
 
     const handlePrev = () => {
@@ -145,19 +155,23 @@ function App() {
         iframeTarget.loadVideoById(currentVideoId);
         iframeTarget.playVideo();
         setIsPlaying(true);
+        gaEventTracker('playPrev');
     }
     const _onReady = (event) => {
         setIframeTarget(event.target);
         setVideoLength(event.target.getDuration() / 60);
         setIsPlaying(true);
+        gaEventTracker('onReady');
     }
 
     const seekTo = (time) => {
         iframeTarget.seekTo(time * 60);
+        gaEventTracker('seekVideo');
     }
 
     const playRepeat = (time) => {
         iframeTarget.setLoop(true);
+        gaEventTracker('repeatVideo');
     }
     return (
         <>
