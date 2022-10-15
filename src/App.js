@@ -47,6 +47,12 @@ function App() {
             title: 'Long Drive Mashup | Non-Stop JukeBox | Jay Guldekar | Road Trip Mashup | Romantic LoFi, Chill',
             poster: 'HA-WJYc4J9c.jpeg',
             author: 'Jay Guldekar'
+        },
+        {
+            id: '2tuyLghqDDQ',
+            title: 'Mood X Waalian X Senorita X Tu Aake Dekhle | DJ Rohan | Chill Mashup 2021 | @Shawn Mendes',
+            poster: '2tuyLghqDDQ.jpeg',
+            author: 'ROHAN ♪'
         }
     ]);
     const randomVideo = () => {
