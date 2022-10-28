@@ -57,6 +57,12 @@ function App() {
             title: 'Mood X Waalian X Senorita X Tu Aake Dekhle | DJ Rohan | Chill Mashup 2021 | @Shawn Mendes',
             poster: '2tuyLghqDDQ.jpeg',
             author: 'ROHAN ♪'
+        },
+        {
+            id: '_I1Vkcr-k7M',
+            title: 'Late night & alone 🥀 | Midnight hindi best sad songs | relax lofi songs | Lost Forever',
+            poster: '_I1Vkcr-k7M.jpeg',
+            author: 'Lost Forever'
         }
     ]);
     const randomVideo = () => {
